@@ -1,0 +1,34 @@
+.chatbox {
+    width: 500px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+
+.text-input {
+    padding: 10px;
+    width: 100%;
+}
+
+.msg {
+    padding: 10px 0;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.msg-from {
+    font-weight: bold;
+}
+
+.msg-time {
+    font-size: 13px;
+}
+
+.msg-body {
+    font-size: 18px;
+}
+
+.messages {
+    min-height: 0;
+    max-height: 400px;
+    margin-top: 30px;
+    overflow: auto;
+}
