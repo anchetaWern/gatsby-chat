@@ -75,7 +75,6 @@ class Chat extends React.Component {
             <form onSubmit={this.onSubmit}>
               <input type="text" className="text-input" placeholder="Type your message here.." 
                 value={this.state.message} 
-                onKeyPress={this.onMessage}
                 onChange={this.handleChange} />
              </form>
               {
