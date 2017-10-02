@@ -13,7 +13,7 @@ class Chat extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.onMessage = this.onMessage.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.state = {
       message: '',
       messages: []
@@ -49,22 +49,20 @@ class Chat extends React.Component {
     });
   }
 
-  onMessage(e) {
-    if(e.key == 'Enter'){
-      let text = e.target.value;
-      let message = {
-        by: this.user,
-        body: text,
-        time: new Date()
-      };
-
-      this.post_channel.trigger('client-on-message', message);
-      this.setState({
-        message: '',
-        messages: this.state.messages.concat(message)
-      });
-
-    }
+  onSubmit(e) {
+    e.preventDefault();
+    let text = this.state.message;
+    let message = {
+      by: this.user,
+      body: text,
+      time: new Date()
+    };
+    
+    this.post_channel.trigger('client-on-message', message);
+    this.setState({
+      message: '',
+      messages: this.state.messages.concat(message)
+    });
   }
 
   render() {  
@@ -74,10 +72,12 @@ class Chat extends React.Component {
           
           <div className="post-single__inner">
             <h1>Chat Component</h1>
-            <input type="text" className="text-input" placeholder="Type your message here.." 
-              value={this.state.message} 
-              onKeyPress={this.onMessage}
-              onChange={this.handleChange} />
+            <form onSubmit={this.onSubmit}>
+              <input type="text" className="text-input" placeholder="Type your message here.." 
+                value={this.state.message} 
+                onKeyPress={this.onMessage}
+                onChange={this.handleChange} />
+             </form>
               {
                 this.state.messages &&
                 <MessageList messages={this.state.messages} />
