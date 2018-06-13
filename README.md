@@ -2,7 +2,7 @@
 
 You can view the tutorial at the Pusher tutorial hub: [Add a chat widget to your Gatsby blog](https://pusher.com/tutorials/chat-gatsby)
 
-*Note: the Gatsby static site generator as well as React is updated all the time. This means the code in this repo might already be outdated, so be sure to check out the release notes / changelog for both [Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/CHANGELOG.md) and [React](https://github.com/facebook/react/releases).
+*Note: the Gatsby static site generator as well as React is updated all the time. This means the code in this repo might already be outdated, so be sure to check out the release notes / changelog for both [Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/CHANGELOG.md) and [React](https://github.com/facebook/react/releases).*
 
 ## Prerequisites
 
